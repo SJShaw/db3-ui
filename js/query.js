@@ -25,6 +25,7 @@ function runSearch() {
         success: function (data, status, req) {
             if (data.clusters && data.clusters.length === 0) {
                 //TODO handle no results
+                alert("no results");
             } else {
                 // TODO if region search type
                 $(".query-builder").hide();
@@ -35,7 +36,7 @@ function runSearch() {
         },
         error: function (data, status, req) {
             //TODO show 'an error occurred'
-            console.log("ignoring error");
+            alert("error in request");
         }
     });
     // TODO show "Searching, please wait..."
