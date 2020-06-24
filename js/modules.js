@@ -212,6 +212,7 @@ function runSearch() {
             //TODO show results
             if (data.clusters && data.clusters.length === 0) {
                 //TODO handle no results
+                alert("no results");
             } else {
                 $(".query-container").hide();
                 showResults(data);
@@ -220,10 +221,7 @@ function runSearch() {
         },
         error: function (data, status, req) {
             //TODO show 'an error occurred'
-            console.log("ignoring error");
-            console.log("USING CANNED RESPONSE"); data = cannedResponse;
-            $(".query-container").hide();
-            showResults(data);
+            alert("error getting results");
         }
     });
     // TODO show "Searching, please wait..."
