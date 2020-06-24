@@ -1,0 +1,302 @@
+.body {
+    font-family: Helvetica, Verdana, Tahoma, Sans-Serif;
+}
+
+.instructions {
+    font-size: 0.9em;
+    padding-left: 10em;
+    padding-bottom: 2em;
+}
+
+.query-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    padding-top: 1em;
+}
+
+td {
+    padding-right: 1em;
+}
+
+.search {
+    margin-top: 2em;
+}
+
+.search button {
+    width: 100%;
+}
+
+.current-query {
+}
+
+.current-module {
+}
+
+.section {
+    border: 1px solid gray;
+    margin: 0 auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 17%;
+}
+
+.section-header {
+    width: 100%;
+    text-align: center;
+}
+
+.section-elements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 1em;
+}
+
+.element-alternatives {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    position: relative; /* so the before can be absolute with a transform */
+    min-width: 5em;
+    min-height: 1em;
+}
+
+.element-alternatives:not(:first-child){
+    margin-top: 1.5em;
+}
+
+.element-alternatives:not(:first-child):before {
+    content: "or";
+    display: inline-block;
+    transform: translate(0%, -110%);
+    position: absolute;
+    margin: 0 auto;
+    float: left;
+    left: 0;
+    right: 0;
+    width: 1em;
+}
+
+.element {
+    white-space: nowrap;
+}
+
+.element-inner {
+    display: block;
+    float: right;
+    border-radius: 15px;
+    background-color: #dadada;
+    border: 1px solid gray;
+    min-width: 3em;
+    position: relative; /* so the before can be absolute with a transform */
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    color: black;
+}
+
+.element-alternatives > .element:not(:first-child):before {
+    content: "and";
+    float: left;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.element-ignore {
+    background-color: revert;
+    border: 0px;
+}
+
+#module-query-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.element-adenylation {
+    border: 1px solid #571680;
+    background-color: #bc7ff5;
+}
+
+.element-condensation, .element-epimerase {
+    border: 1px solid #3b3b8c;
+    background-color: #8181f7;
+}
+
+.element-placeholder {
+    display: block;
+    border-radius: 15px;
+    background-color: #dadada;
+    border: 1px solid gray;
+    min-width: 3em;
+    min-height: 1em;
+    position: relative; /* so the before can be absolute with a transform */
+    text-align: center;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+
+    border-style: dashed;
+}
+
+.empty-alternatives {
+    display: block;
+    border-radius: 2px;
+    background-color: #eee;
+    border: 1px dashed gray;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 4em;
+}
+
+.domain-sections {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.domain-section {
+}
+
+.domain-section h3 {
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.element-bin {
+    margin: 0 auto;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.domain-sections .element-inner {
+    float: none; /* normally floats right for the "and", but in the selector portion that's bad */
+}
+
+.domain-sections .element-none {
+    margin-bottom: 1em;
+}
+
+.error-message {
+    color: black;
+    background-color: #ffa1a1;
+    position: fixed;
+    right: 10%;
+    width: 40em;
+    top: 5%;
+    display: block;
+    border-radius: 0.5em;
+    padding: 1.5em;
+    opacity: 0;  /* start invisible, appears only via scripts */
+    font-size: 1.5em;
+}
+
+
+
+.element-transport {
+  border-color: #0b4ec7;
+  background-color: #81bef7;
+}
+
+.element-condensation, .element-epimerase {
+  border-color: #3b3b8c;
+  background-color: #8181f7;
+}
+
+.element-docking {
+  border-color: #47479f;
+  background-color: #8080f5;
+}
+
+.element-terminal {
+  border-color: #770374;
+  background-color: #f5c4f2;
+}
+
+.element-ketosynthase {
+  border-color: #09b309;
+  background-color: #81f781;
+}
+
+.element-acyltransferase {
+  border-color: #dd0606;
+  background-color: #f78181;
+}
+
+.element-pks-dh {
+  border-color: #ba670f;
+  background-color: #f7be81;
+}
+
+.element-pks-er {
+  border-color: #0ca189;
+  background-color: #81f7f3;
+}
+
+.element-pks-kr {
+  border-color: #0aa04c;
+  background-color: #80f680;
+}
+
+.element-other {
+  border-color: #939393;
+  background-color: #dadada;
+}
+
+.switch-container span.switch-desc {    
+  padding-left: 20%;
+  padding-right: 0.5em;
+}
+.switch-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.5em;
+}
+.switch-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1.5em;
+}
+.switch-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 80%; 
+  width: 50%; 
+  left: 10%; 
+  bottom: 10%; 
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%; 
+}
+.switch-container input:checked + .slider {
+  background-color: #810e15;
+}
+.switch-container input:checked + .slider:before {
+  transform: translateX(60%);
+}

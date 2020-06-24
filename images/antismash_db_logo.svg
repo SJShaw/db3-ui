@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="226.0114mm"
+   height="212.13704mm"
+   viewBox="0 0 800.82779 751.66667"
+   id="svg4195"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="antismash_db_logo.svg">
+  <defs
+     id="defs4197">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3744"
+       id="linearGradient3750"
+       x1="21.666666"
+       y1="333.33334"
+       x2="800"
+       y2="332.98871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99931419,0,0,1,137.37859,91.909819)" />
+    <linearGradient
+       id="linearGradient3744">
+      <stop
+         style="stop-color:#700000;stop-opacity:1;"
+         offset="0"
+         id="stop3746" />
+      <stop
+         id="stop3790"
+         offset="0.09731334"
+         style="stop-color:#aa0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#aa0000;stop-opacity:1;"
+         offset="0.8870402"
+         id="stop3792" />
+      <stop
+         style="stop-color:#700000;stop-opacity:1;"
+         offset="1"
+         id="stop3748" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(136.82993,213.90982)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient2956"
+       id="linearGradient2962"
+       x1="400.75006"
+       y1="600"
+       x2="400.75"
+       y2="545"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient2956">
+      <stop
+         style="stop-color:#bbbbbb;stop-opacity:1;"
+         offset="0"
+         id="stop2958" />
+      <stop
+         style="stop-color:#eeeeee;stop-opacity:1;"
+         offset="1"
+         id="stop2960" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-211.72895"
+     inkscape:cy="281.54763"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1151"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4200">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-136.72895,-62.243149)">
+    <rect
+       style="fill:url(#linearGradient2962);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="logo-background"
+       width="677.5"
+       height="751.66669"
+       x="198.82994"
+       y="62.243149"
+       inkscape:label="logo-background"
+       ry="38.33334"
+       rx="38.333332" />
+    <rect
+       style="fill:url(#linearGradient3750);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="rect2904"
+       width="799.45135"
+       height="242.24644"
+       x="137.37859"
+       y="298.7753" />
+    <path
+       style="fill:#800000;stroke:none"
+       d="m 167.84648,562.46207 c -17.19612,-12.4451 -31.19885,-22.6643 -31.11717,-22.70934 0.0817,-0.0451 13.87118,-0.071 30.64334,-0.0579 l 30.49484,0.024 0.68067,22.56707 c 0.37437,12.41189 0.65442,22.62031 0.62234,22.68538 -0.0321,0.0651 -14.12789,-10.06405 -31.32402,-22.50917 l 0,0 z"
+       id="path2932"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#800000;stroke:none"
+       d="m 906.73317,563.17889 c 17.03502,-12.66472 30.90548,-23.06275 30.82323,-23.10673 -0.0823,-0.044 -13.87096,0.10695 -30.64157,0.33529 l -30.49202,0.41523 -0.39106,22.57394 c -0.21508,12.41567 -0.36412,22.62685 -0.33121,22.6915 0.0329,0.0647 13.9976,-10.24449 31.03263,-22.90923 l 0,0 z"
+       id="path2932-2"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:160px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';text-align:center;text-anchor:middle;fill:#ececec;fill-opacity:1;stroke:none"
+       x="534.82996"
+       y="476.24313"
+       id="text3808"><tspan
+         sodipodi:role="line"
+         id="tspan3810"
+         x="534.82996"
+         y="476.24313"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:180px;font-family:Waree;-inkscape-font-specification:'Waree Bold'">SMASH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:Waree;-inkscape-font-specification:Waree;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="542.82996"
+       y="244.57648"
+       id="text3816"><tspan
+         sodipodi:role="line"
+         id="tspan3818"
+         x="542.82996"
+         y="244.57648"
+         style="font-weight:bold;font-size:200px;-inkscape-font-specification:'Aurek-Besh Hand Bold';fill:#aa0000;fill-opacity:1">anti</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:Waree;-inkscape-font-specification:Waree;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="541.47675"
+       y="721.13708"
+       id="text3816-3"><tspan
+         sodipodi:role="line"
+         id="tspan3818-6"
+         x="541.47675"
+         y="721.13708"
+         style="font-weight:bold;font-size:200px;-inkscape-font-specification:'Aurek-Besh Hand Bold';fill:#aa0000;fill-opacity:1">DB</tspan></text>
+  </g>
+</svg>

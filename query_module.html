@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>antiSMASH database</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/query_module.css" rel="stylesheet">
+        <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-antismash">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/antismash_db_logo.svg" alt="antiSMASH logo" width="30px"></a>
+                    <a class="navbar-brand" href="index.html">antiSMASH database</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="stats.html"><i class="fa fa-bar-chart"></i> &nbsp; Statistics</a></li>
+                    <li><a href="query.html"><i class="fa fa-search"></i> &nbsp; Query</a></li>
+                    <li><a href="browse.html"><i class="fa fa-compass"></i> &nbsp; Browse</a></li>
+                    <li><a href="about.html"><i class="fa fa-info"></i> &nbsp; About</a></li>
+                    <li><a href="help.html"><i class="fa fa-question"></i> &nbsp; Help</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <div class="wide-container">
+                <div class="page-header">
+                    <h1>NRPS/PKS module query</h1>
+                </div>
+                <div class="row query-builder">
+                    <div active="0" justified="true" type="pills">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="uib-tab nav-item" index="0" heading="Simple search">
+                                <a href="query.html" class="nav-link">Simple search</a>
+                            </li>
+                            <li  class="uib-tab nav-item" index="1" heading="Build a query">
+                                <a href="query_builder.html" class="nav-link">Build a query</a>
+                            </li>
+                            <li  class="uib-tab nav-item active" index="1" heading="NRPS/PKS module query">
+                                <a href="query_module.html" class="nav-link">NRPS/PKS module query</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="query-container">
+                                    <div class="pattern-list form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-4">
+                                            </div>
+                                            <label class="col-sm-2 control-label">Return data in format: </label>
+                                            <div class="col-sm-3">
+                                                <div class="btn-group result-types">
+                                                    <label class="btn btn-info active">Graphical</label>
+                                                    <label class="btn btn-info">CSV</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="instructions">
+                                            <h3>Prototype instructions</h3>
+                                            Drag elements in the query to reorder them or to move them to a new alternative group (an OR).<br>
+                                            Click an element in the query to remove it.<br>
+                                            Click an element in the "buffet" below to add a new alternative group with that element.<br>
+                                            Ctrl(or Cmd)-click an element in the "buffet" to add it to the last alternative group (an AND).<br>
+                                            <br>
+                                            Special characters/operators<br>
+                                            <b>none</b>: no domain is allowed<br>
+                                            <b>any</b>: a single domain must exist, but it can be anything<br>
+                                            <b>ignored</b>: the section is not considered when searching<br>
+                                        </div>
+                                        <div class="current-module">
+                                            <div id="module-query-container" data-query="S=Condensation,Condensation_DCL|L=AMP-binding|M=oMT+cMT>nMT|T=?|F=0|O=*">
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Condensation step</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="S">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Substrate activation</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="L">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Modifications</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="M">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Carrier protein</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="T">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Epimerase/Finalisation</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="F">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section">
+                                                    <div class="section-header">
+                                                        <h3>Other</h3>
+                                                    </div>
+                                                    <div class="section-elements" data-type="O">
+                                                        <div class="element-alternatives">
+                                                            <div class="element element-ignore ui-sortable-handle">ignored</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buttons">
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary btn-block search-button">
+                                                        <i class="fa fa-search"></i> Search
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="switch-container" style="display:none;">
+                                                        <span class="switch-desc">Advanced mode</span>
+                                                        <label class="switch">
+                                                            <input type="checkbox" id="advanced-mode" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-default btn-block clear-query">Clear query</button>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-default btn-block example-button">
+                                                        <i class="fa"></i>Load example search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="simple-sections" class="domain-sections">
+                                            <div class="domain-section" data-type="S">
+                                                <h3>Condensation step</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Any Condensation
+                                                </div>
+                                                <div class="element-inner element-ketosynthase">
+                                                    Any PKS_KS
+                                                </div>
+                                                <div class="element-inner">
+                                                    CAL_domain
+                                                </div>
+                                                <div class="element-inner">
+                                                    SAT
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="L">
+                                                <h3>Adenylation/Acyltransferase</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-adenylation">
+                                                    Any Adenylation
+                                                </div>
+                                                <div class="element-inner element-acyltransferase">
+                                                    PKS_AT
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="M">
+                                                <h3>Modifications</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    oMT
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    cMT
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    nMT
+                                                </div>
+                                                <div class="element-inner element-pks-dh">
+                                                    Any PKS_DH
+                                                </div>
+                                                <div class="element-inner element-pks-er">
+                                                    PKS_ER
+                                                </div>
+                                                <div class="element-inner element-pks-kr">
+                                                    PKS_KR
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="T">
+                                                <h3>Carrier protein</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                            </div>
+                                     
+                                             <div class="domain-section" data-type="F">
+                                                <h3>Epimerase/Finalisation</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-terminal">
+                                                    TD
+                                                </div>
+                                                <div class="element-inner element-terminal">
+                                                    Thioesterase
+                                                </div>
+                                                <div class="element-inner element-epimerase">
+                                                    Epimerization
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="domain-section" data-type="O">
+                                                <h3>Other</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner">
+                                                    Trans-AT_docking
+                                                </div>
+                                                <div class="element-inner">
+                                                    Any Aminotran
+                                                </div>
+                                                see advanced mode for more
+                                            </div>
+                                        </div>
+
+                                        <div id="advanced-sections" class="domain-sections" style="display: none;">
+                                            <div class="domain-section" data-type="S">
+                                                <h3>Condensation step</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Condensation
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Condensation_DCL
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Condensation_LCL
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Condensation_Starter
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Condensation_Dual
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Cglyc
+                                                </div>
+                                                <div class="element-inner element-condensation">
+                                                    Heterocyclization
+                                                </div>
+                                                <div class="element-inner element-ketosynthase">
+                                                    PKS_KS
+                                                </div>
+                                                <div class="element-inner">
+                                                    CAL_domain
+                                                </div>
+                                                <div class="element-inner">
+                                                    SAT
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="L">
+                                                <h3>Adenylation/Acyltransferase</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-adenylation">
+                                                    AMP-binding
+                                                </div>
+                                                <div class="element-inner element-adenylation">
+                                                    A-OX
+                                                </div>
+                                                <div class="element-inner element-acyltransferase">
+                                                    PKS_AT
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="M">
+                                                <h3>Modifications</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    oMT
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    cMT
+                                                </div>
+                                                <div class="element-inner element-methyltransferase">
+                                                    nMT
+                                                </div>
+                                                <div class="element-inner element-pks-dh">
+                                                    PKS_DH
+                                                </div>
+                                                <div class="element-inner element-pks-dh">
+                                                    PKS_DH2
+                                                </div>
+                                                <div class="element-inner element-pks-dh">
+                                                    PKS_DHt
+                                                </div>
+                                                <div class="element-inner element-pks-er">
+                                                    PKS_ER
+                                                </div>
+                                                <div class="element-inner element-pks-kr">
+                                                    PKS_KR
+                                                </div>
+                                            </div>
+                                            <div class="domain-section" data-type="T">
+                                                <h3>Carrier protein</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-transport">
+                                                    PCP
+                                                </div>
+                                                <div class="element-inner element-transport">
+                                                    ACP
+                                                </div>
+                                                <div class="element-inner element-transport">
+                                                    ACP_beta
+                                                </div>
+                                                <div class="element-inner element-transport">
+                                                    PP-binding
+                                                </div>
+                                                <div class="element-inner element-transport">
+                                                    PKS_PP
+                                                </div>
+                                            </div>
+                                     
+                                             <div class="domain-section" data-type="F">
+                                                <h3>Epimerase/Finalisation</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner element-terminal">
+                                                    TD
+                                                </div>
+                                                <div class="element-inner element-terminal">
+                                                    Thioesterase
+                                                </div>
+                                                <div class="element-inner element-epimerase">
+                                                    Epimerization
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="domain-section" data-type="O">
+                                                <h3>Other</h3>
+                                                <div class="element-inner element-any">
+                                                    any
+                                                </div>
+                                                <div class="element-inner element-none">
+                                                    none
+                                                </div>
+                                                <div class="element-inner">
+                                                    Trans-AT_docking
+                                                </div>
+                                                <div class="element-inner">
+                                                    ACPS
+                                                </div>
+                                                <div class="element-inner">
+                                                    Aminotran_1_2
+                                                </div>
+                                                <div class="element-inner">
+                                                    Aminotran_3
+                                                </div>
+                                                <div class="element-inner">
+                                                    Aminotran_4
+                                                </div>
+                                                <div class="element-inner">
+                                                    Aminotran_5
+                                                </div>
+                                                <div class="element-inner">
+                                                    B
+                                                </div>
+                                                <div class="element-inner">
+                                                    ECH
+                                                </div>
+                                                <div class="element-inner">
+                                                    F
+                                                </div>
+                                                <div class="element-inner">
+                                                    F
+                                                </div>
+                                                <div class="element-inner">
+                                                    FkbH
+                                                </div>
+                                                <div class="element-inner">
+                                                    GNAT
+                                                </div>
+                                                <div class="element-inner">
+                                                    Hal
+                                                </div>
+                                                <div class="element-inner">
+                                                    NAD_binding_4
+                                                </div>
+                                                <div class="element-inner">
+                                                    NRPS-COM_Cterm
+                                                </div>
+                                                <div class="element-inner">
+                                                    NRPS-COM_Nterm
+                                                </div>
+                                                <div class="element-inner">
+                                                    PKS_Docking_Cterm
+                                                </div>
+                                                <div class="element-inner">
+                                                    PKS_Docking_Nterm
+                                                </div>
+                                                <div class="element-inner">
+                                                    Polyketide_cyc
+                                                </div>
+                                                <div class="element-inner">
+                                                    Polyketide_cyc2
+                                                </div>
+                                                <div class="element-inner">
+                                                    PS
+                                                </div>
+                                                <div class="element-inner">
+                                                    PT
+                                                </div>
+                                                <div class="element-inner">
+                                                    TIGR01720
+                                                </div>
+                                                <div class="element-inner">
+                                                    TIGR02353
+                                                </div>
+                                                <div class="element-inner">
+                                                    X
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    <div class="error-message">
+                                        <div class="message"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="results" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <button class="btn btn-default btn-block edit-search">Edit search</button>
+                        </div>
+                    </div>
+                    <div class="row charts">
+                        <div class="in collapse" style="height: auto;">
+                            <div class="col-xs-4">
+                                <div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                        </div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="chart chart-bar chartjs-render-monitor chart-by-type" style="display: block; width: 490px; height: 245px;" width="490" height="245"></canvas>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                        </div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="chart chart-bar chartjs-render-monitor chart-by-phylum" style="display: block; width: 490px; height: 245px;" width="490" height="245"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row query-results-count">
+                          <div class="col-md-4 result-counts">
+                          </div>
+                          <div class="col-md-1">
+                                <button class="btn btn-default stats-toggle">Hide stats</button>
+                          </div>
+                          <div class="col-md-2">
+                                <button class="btn btn-block btn-primary"><i class="fa fa-download"></i> Download results</button>
+                          </div>
+                    </div>
+                    <div class="row search-box">
+                          <table id="results-table" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Species</th>
+                                    <th>Cluster</th>
+                                    <th>Analysis</th>
+                                    <th>Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Edge</th>
+                                    <th>Most similar MIBiG cluster</th>
+                                    <th>Similarity</th>
+                                    <th>MIBiG BGC-ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-primary search-button load-more" data-start="0"><i class="fa fa-plus"></i> Load more results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="col-sm-2">
+                    <img src="images/antismash_db_logo.svg" height="100px">
+                </div>
+                <div class="col-sm-6 cite-me well">
+If you have found the antiSMASH database useful, please <a href="about.html">cite us</a>.
+                </div>
+                <div class="col-sm-4 org-logos">
+                    <div class="col-sm-4">
+                        <img src="images/dtu_logo.svg" height="80px">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/cfb_logo.svg" height="80px">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/results.js"></script>
+        <script src="js/modules.js"></script>
+        <script>
+            $(document).ready(function() {
+                start();
+            });
+        </script>
+    </body>
+</html>

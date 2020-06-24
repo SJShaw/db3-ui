@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>antiSMASH database</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-antismash">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/antismash_db_logo.svg" alt="antiSMASH logo" width="30px">
+                </a>
+                <a class="navbar-brand" href="index.html">
+                  antiSMASH database
+                </a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="stats.html"><i class="fa fa-bar-chart"></i> &nbsp; Statistics</a></li>
+                <li><a href="query.html"><i class="fa fa-search"></i> &nbsp; Query</a></li>
+                <li><a href="browse.html"><i class="fa fa-compass"></i> &nbsp; Browse</a></li>
+                <li><a href="about.html"><i class="fa fa-info"></i> &nbsp; About</a></li>
+                <li><a href="help.html"><i class="fa fa-question"></i> &nbsp; Help</a></li>
+              </ul>
+            </div>
+        </nav>
+
+        <div ui-view=""><div class="wide-container">
+            <div class="page-header">
+              <h1>Query</h1>
+            </div>
+
+            <div class="row">
+              <div active="0" justified="true" type="pills">
+              <ul class="nav nav-pills nav-justified">
+                <li class="uib-tab nav-item active" index="0" heading="Simple search">
+                  <a href="" class="nav-link">Simple search</a>
+                </li>
+                    <li class="uib-tab nav-item" index="1" heading="Build a query">
+                  <a href="query_builder.html" class="nav-link">Build a query</a>
+                </li>
+                <li  class="uib-tab nav-item" index="1" heading="NRPS/PKS module query">
+                    <a href="query_module.html" class="nav-link">NRPS/PKS module query</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active query-container">
+                  <form>
+                    <div class="form-group">
+                      <div class="col-md-8 col-md-offset-1 search-box">
+                        <label for="search-string">Enter your search term</label>
+                        <input type="text" class="form-control" id="search-string" placeholder="e.g. lantipeptide streptomyces">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-offset-4 col-md-4 search-button">
+                        <button class="btn btn-primary btn-block search-button">Search</button>
+                      </div>
+                      <div class="col-md-offset-2 col-md-2 search-button">
+                        <button class="btn btn-default btn-block example-button">Load example</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="results" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <button class="btn btn-default btn-block edit-search">Edit search</button>
+                        </div>
+                    </div>
+                    <div class="row charts">
+                        <div class="in collapse" style="height: auto;">
+                            <div class="col-xs-4">
+                                <div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                        </div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="chart chart-bar chartjs-render-monitor chart-by-type" style="display: block; width: 490px; height: 245px;" width="490" height="245"></canvas>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                        </div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas class="chart chart-bar chartjs-render-monitor chart-by-phylum" style="display: block; width: 490px; height: 245px;" width="490" height="245"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row query-results-count">
+                          <div class="col-md-4 result-counts">
+                          </div>
+                          <div class="col-md-1">
+                                <button class="btn btn-default stats-toggle">Hide stats</button>
+                          </div>
+                          <div class="col-md-2">
+                                <button class="btn btn-block btn-primary"><i class="fa fa-download"></i> Download results</button>
+                          </div>
+                    </div>
+                    <div class="row search-box">
+                          <table id="results-table" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Species</th>
+                                    <th>Cluster</th>
+                                    <th>Analysis</th>
+                                    <th>Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Edge</th>
+                                    <th>Most similar MIBiG cluster</th>
+                                    <th>Similarity</th>
+                                    <th>MIBiG BGC-ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-primary load-more" data-start="0"><i class="fa fa-plus"></i> Load more results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        <footer class="footer">
+            <div class="container">
+              <div class="col-sm-2">
+                <img src="images/antismash_db_logo.svg" height="100px">
+              </div>
+              <div class="col-sm-6 cite-me well">
+                If you have found the antiSMASH database useful, please <a href="about.html">cite us</a>.
+              </div>
+              <div class="col-sm-4 org-logos">
+                <div class="col-sm-4">
+                  <img src="images/dtu_logo.svg" height="80px">
+                </div>
+                <div class="col-sm-4">
+                  <img src="images/cfb_logo.svg" height="80px">
+                </div>
+              </div>
+            </div>
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/results.js"></script>
+        <script src="js/query.js"></script>
+        <script>
+            $(document).ready(function() {
+                start();
+            });
+        </script>
+    </body>
+</html>

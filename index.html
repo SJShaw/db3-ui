@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="antismash.db.ui" class="ng-scope" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>antiSMASH database</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-antismash">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/antismash_db_logo.svg" alt="antiSMASH logo" width="30px">
+        </a>
+        <a class="navbar-brand" href="#">
+          antiSMASH database
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="stats.html"><i class="fa fa-bar-chart"></i> &nbsp; Statistics</a></li>
+        <li><a href="query.html"><i class="fa fa-search"></i> &nbsp; Query</a></li>
+        <li><a href="browse.html"><i class="fa fa-compass"></i> &nbsp; Browse</a></li>
+        <li><a href="about.html"><i class="fa fa-info"></i> &nbsp; About</a></li>
+        <li><a href="help.html"><i class="fa fa-question"></i> &nbsp; Help</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div ui-view="" class="ng-scope">
+<div class="container ng-scope">
+<div class="page-header">
+  <h1>antiSMASH database <small>Precomputed antiSMASH results and advanced queries</small></h1>
+</div>
+
+<div class="row">
+  <div class="col-md-4 well well-sm">
+    <a href="stats.html" class="fake-button">
+      <h3><i class="fa fa-bar-chart"></i> &nbsp; Statistics</h3>
+      about the secondary metabolites in our database.
+    </a>
+  </div>
+  <div class="col-md-4 well well-sm">
+    <a href="query.html" class="fake-button">
+      <h3><i class="fa fa-search"></i> &nbsp; Query</h3>
+      the database for secondary metabolite clusters.
+    </a>
+  </div>
+  <div class="col-md-4 well well-sm">
+    <a href="browse.html" class="fake-button">
+      <h3><i class="fa fa-compass"></i> &nbsp; Browse</h3>
+      the database by phylogeny or secondary metabolite type
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <p>
+    The antiSMASH database offers researchers three main pieces of funtionality.
+  </p>
+  <p>
+    It is possible to browse the database by phylogeny or secondary metabolite
+    type, giving an exploratory overview of the avaliable biosynthetic gene
+    cluster predictions. Selecting a cluster for closer inspection will redirect
+    to the antiSMASH results page, offering all the usual annotations.
+  </p>
+  <p>Alteratively, it is possible to query for specific biosynthetic gene cluster
+    types, monomers and many more. The simple search field queries for the most
+    common options, the "build a query" page allows to construct more detailed queries.
+  </p>
+  <p>
+    Lastly, a number of summary statistics are available to give a general idea of
+    the types of secondary metabolite production represented by the database.
+  </p>
+</div>
+
+<div class="row">
+  <h4>To cite the antiSMASH database, please reference</h4>
+  <p><strong>The antiSMASH database, a comprehensive database of microbial secondary metabolite biosynthetic gene clusters</strong><br>
+Kai Blin; Marnix H. Medema; Renzo Kottmann; Sang Yup Lee; Tilmann Weber<br>
+Nucleic Acids Research 2016; doi: <a href="https://dx.doi.org/10.1093/nar/gkw960">10.1093/nar/gkw960</a>
+</p></div>
+
+</div>
+</div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="col-sm-2">
+        <img src="images/antismash_db_logo.svg" height="100px">
+      </div>
+      <div class="col-sm-6 cite-me well">
+        If you have found the antiSMASH database useful, please <a href="about.html">cite us</a>.
+      </div>
+      <div class="col-sm-4 org-logos">
+        <div class="col-sm-4">
+          <img src="images/dtu_logo.svg" height="80px">
+        </div>
+        <div class="col-sm-4">
+          <img src="images/cfb_logo.svg" height="80px">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+</body></html>

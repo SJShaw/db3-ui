@@ -1,0 +1,1106 @@
+/* colour definitions for secondary metabolite types */
+.pks {
+  background-color: sandybrown;
+  color: purple;
+}
+.pks a,
+.pks a:link,
+.pks a:visited {
+  color: purple;
+}
+.pks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.pks:hover {
+  background-color: #f8c8a0;
+}
+.pigment {
+  background-color: peru;
+  color: white;
+}
+.pigment a,
+.pigment a:link,
+.pigment a:visited {
+  color: white;
+}
+.pigment.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.pigment:hover {
+  background-color: #e1b68c;
+}
+.hydrocarbon {
+  background-color: purple;
+  color: white;
+}
+.hydrocarbon a,
+.hydrocarbon a:link,
+.hydrocarbon a:visited {
+  color: white;
+}
+.hydrocarbon.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.hydrocarbon:hover {
+  background-color: #b366b3;
+}
+.ripp {
+  background-color: royalblue;
+  color: white;
+}
+.ripp a,
+.ripp a:link,
+.ripp a:visited {
+  color: white;
+}
+.ripp.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.ripp:hover {
+  background-color: #8da5ed;
+}
+.putative {
+  background-color: #f2f2f2;
+  color: black;
+}
+.putative a,
+.putative a:link,
+.putative a:visited {
+  color: black;
+}
+.putative.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.putative:hover {
+  background-color: #f7f7f7;
+}
+.t1pks {
+  background-color: sandybrown;
+  color: purple;
+}
+.t1pks a,
+.t1pks a:link,
+.t1pks a:visited {
+  color: purple;
+}
+.t1pks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.t1pks:hover {
+  background-color: #f8c8a0;
+}
+.transatpks {
+  background-color: sandybrown;
+  color: purple;
+}
+.transatpks a,
+.transatpks a:link,
+.transatpks a:visited {
+  color: purple;
+}
+.transatpks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.transatpks:hover {
+  background-color: #f8c8a0;
+}
+.t2pks {
+  background-color: sandybrown;
+  color: purple;
+}
+.t2pks a,
+.t2pks a:link,
+.t2pks a:visited {
+  color: purple;
+}
+.t2pks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.t2pks:hover {
+  background-color: #f8c8a0;
+}
+.t3pks {
+  background-color: sandybrown;
+  color: purple;
+}
+.t3pks a,
+.t3pks a:link,
+.t3pks a:visited {
+  color: purple;
+}
+.t3pks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.t3pks:hover {
+  background-color: #f8c8a0;
+}
+.otherks {
+  background-color: sandybrown;
+  color: purple;
+}
+.otherks a,
+.otherks a:link,
+.otherks a:visited {
+  color: purple;
+}
+.otherks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.otherks:hover {
+  background-color: #f8c8a0;
+}
+.ppysks {
+  background-color: sandybrown;
+  color: purple;
+}
+.ppysks a,
+.ppysks a:link,
+.ppysks a:visited {
+  color: purple;
+}
+.ppysks.active {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+.ppysks:hover {
+  background-color: #f8c8a0;
+}
+.arylpolyene {
+  background-color: peru;
+  color: white;
+}
+.arylpolyene a,
+.arylpolyene a:link,
+.arylpolyene a:visited {
+  color: white;
+}
+.arylpolyene.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.arylpolyene:hover {
+  background-color: #e1b68c;
+}
+.resorcinol {
+  background-color: purple;
+  color: white;
+}
+.resorcinol a,
+.resorcinol a:link,
+.resorcinol a:visited {
+  color: white;
+}
+.resorcinol.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.resorcinol:hover {
+  background-color: #b366b3;
+}
+.ladderane {
+  background-color: purple;
+  color: white;
+}
+.ladderane a,
+.ladderane a:link,
+.ladderane a:visited {
+  color: white;
+}
+.ladderane.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.ladderane:hover {
+  background-color: #b366b3;
+}
+.pufa {
+  background-color: purple;
+  color: white;
+}
+.pufa a,
+.pufa a:link,
+.pufa a:visited {
+  color: white;
+}
+.pufa.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.pufa:hover {
+  background-color: #b366b3;
+}
+.nrps {
+  background-color: seagreen;
+  color: white;
+}
+.nrps a,
+.nrps a:link,
+.nrps a:visited {
+  color: white;
+}
+.nrps.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.nrps:hover {
+  background-color: #82b99a;
+}
+.terpene {
+  background-color: purple;
+  color: white;
+}
+.terpene a,
+.terpene a:link,
+.terpene a:visited {
+  color: white;
+}
+.terpene.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.terpene:hover {
+  background-color: #b366b3;
+}
+.lantibiotic {
+  background-color: #ffff77;
+  color: blue;
+}
+.lantibiotic a,
+.lantibiotic a:link,
+.lantibiotic a:visited {
+  color: blue;
+}
+.lantibiotic.active {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+.lantibiotic:hover {
+  background-color: #ffffad;
+}
+.lantipeptide {
+  background-color: #ffff77;
+  color: blue;
+}
+.lantipeptide a,
+.lantipeptide a:link,
+.lantipeptide a:visited {
+  color: blue;
+}
+.lantipeptide.active {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+.lantipeptide:hover {
+  background-color: #ffffad;
+}
+.bacteriocin {
+  background-color: royalblue;
+  color: white;
+}
+.bacteriocin a,
+.bacteriocin a:link,
+.bacteriocin a:visited {
+  color: white;
+}
+.bacteriocin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.bacteriocin:hover {
+  background-color: #8da5ed;
+}
+.thiopeptide {
+  background-color: gold;
+  color: black;
+}
+.thiopeptide a,
+.thiopeptide a:link,
+.thiopeptide a:visited {
+  color: black;
+}
+.thiopeptide.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.thiopeptide:hover {
+  background-color: #ffe766;
+}
+.linaridin {
+  background-color: royalblue;
+  color: white;
+}
+.linaridin a,
+.linaridin a:link,
+.linaridin a:visited {
+  color: white;
+}
+.linaridin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.linaridin:hover {
+  background-color: #8da5ed;
+}
+.cyanobactin {
+  background-color: royalblue;
+  color: white;
+}
+.cyanobactin a,
+.cyanobactin a:link,
+.cyanobactin a:visited {
+  color: white;
+}
+.cyanobactin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.cyanobactin:hover {
+  background-color: #8da5ed;
+}
+.glycocin {
+  background-color: royalblue;
+  color: white;
+}
+.glycocin a,
+.glycocin a:link,
+.glycocin a:visited {
+  color: white;
+}
+.glycocin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.glycocin:hover {
+  background-color: #8da5ed;
+}
+.lap {
+  background-color: royalblue;
+  color: white;
+}
+.lap a,
+.lap a:link,
+.lap a:visited {
+  color: white;
+}
+.lap.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.lap:hover {
+  background-color: #8da5ed;
+}
+.lassopeptide {
+  background-color: royalblue;
+  color: white;
+}
+.lassopeptide a,
+.lassopeptide a:link,
+.lassopeptide a:visited {
+  color: white;
+}
+.lassopeptide.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.lassopeptide:hover {
+  background-color: #8da5ed;
+}
+.sactipeptide {
+  background-color: royalblue;
+  color: white;
+}
+.sactipeptide a,
+.sactipeptide a:link,
+.sactipeptide a:visited {
+  color: white;
+}
+.sactipeptide.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.sactipeptide:hover {
+  background-color: #8da5ed;
+}
+.bottromycin {
+  background-color: royalblue;
+  color: white;
+}
+.bottromycin a,
+.bottromycin a:link,
+.bottromycin a:visited {
+  color: white;
+}
+.bottromycin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.bottromycin:hover {
+  background-color: #8da5ed;
+}
+.head_to_tail {
+  background-color: royalblue;
+  color: white;
+}
+.head_to_tail a,
+.head_to_tail a:link,
+.head_to_tail a:visited {
+  color: white;
+}
+.head_to_tail.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.head_to_tail:hover {
+  background-color: #8da5ed;
+}
+.microcin {
+  background-color: royalblue;
+  color: white;
+}
+.microcin a,
+.microcin a:link,
+.microcin a:visited {
+  color: white;
+}
+.microcin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.microcin:hover {
+  background-color: #8da5ed;
+}
+.microviridin {
+  background-color: royalblue;
+  color: white;
+}
+.microviridin a,
+.microviridin a:link,
+.microviridin a:visited {
+  color: white;
+}
+.microviridin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.microviridin:hover {
+  background-color: #8da5ed;
+}
+.proteusin {
+  background-color: royalblue;
+  color: white;
+}
+.proteusin a,
+.proteusin a:link,
+.proteusin a:visited {
+  color: white;
+}
+.proteusin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.proteusin:hover {
+  background-color: #8da5ed;
+}
+.blactam {
+  background-color: aliceblue;
+  color: black;
+}
+.blactam a,
+.blactam a:link,
+.blactam a:visited {
+  color: black;
+}
+.blactam.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.blactam:hover {
+  background-color: #f6fbff;
+}
+.amglyccycl {
+  background-color: yellowgreen;
+  color: black;
+}
+.amglyccycl a,
+.amglyccycl a:link,
+.amglyccycl a:visited {
+  color: black;
+}
+.amglyccycl.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.amglyccycl:hover {
+  background-color: #c2e184;
+}
+.aminocoumarin {
+  background-color: yellowgreen;
+  color: black;
+}
+.aminocoumarin a,
+.aminocoumarin a:link,
+.aminocoumarin a:visited {
+  color: black;
+}
+.aminocoumarin.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.aminocoumarin:hover {
+  background-color: #c2e184;
+}
+.siderophore {
+  background-color: crimson;
+  color: white;
+}
+.siderophore a,
+.siderophore a:link,
+.siderophore a:visited {
+  color: white;
+}
+.siderophore.active {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+.siderophore:hover {
+  background-color: #ea728a;
+}
+.ectoine {
+  background-color: yellowgreen;
+  color: firebrick;
+}
+.ectoine a,
+.ectoine a:link,
+.ectoine a:visited {
+  color: firebrick;
+}
+.ectoine.active {
+  border-color: firebrick;
+  border-width: 2px;
+  border-style: solid;
+}
+.ectoine:hover {
+  background-color: #c2e184;
+}
+.butyrolactone {
+  background-color: mediumpurple;
+  color: white;
+}
+.butyrolactone a,
+.butyrolactone a:link,
+.butyrolactone a:visited {
+  color: white;
+}
+.butyrolactone.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.butyrolactone:hover {
+  background-color: #bea9e8;
+}
+.indole {
+  background-color: peachpuff;
+  color: black;
+}
+.indole a,
+.indole a:link,
+.indole a:visited {
+  color: black;
+}
+.indole.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.indole:hover {
+  background-color: #ffe9d5;
+}
+.nucleoside {
+  background-color: antiquewhite;
+  color: black;
+}
+.nucleoside a,
+.nucleoside a:link,
+.nucleoside a:visited {
+  color: black;
+}
+.nucleoside.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.nucleoside:hover {
+  background-color: #fcf3e7;
+}
+.phosphoglycolipid {
+  background-color: yellowgreen;
+  color: black;
+}
+.phosphoglycolipid a,
+.phosphoglycolipid a:link,
+.phosphoglycolipid a:visited {
+  color: black;
+}
+.phosphoglycolipid.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.phosphoglycolipid:hover {
+  background-color: #c2e184;
+}
+.melanin {
+  background-color: peru;
+  color: white;
+}
+.melanin a,
+.melanin a:link,
+.melanin a:visited {
+  color: white;
+}
+.melanin.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.melanin:hover {
+  background-color: #e1b68c;
+}
+.oligosaccharide {
+  background-color: burlywood;
+  color: black;
+}
+.oligosaccharide a,
+.oligosaccharide a:link,
+.oligosaccharide a:visited {
+  color: black;
+}
+.oligosaccharide.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.oligosaccharide:hover {
+  background-color: #ebd4b7;
+}
+.furan {
+  background-color: purple;
+  color: white;
+}
+.furan a,
+.furan a:link,
+.furan a:visited {
+  color: white;
+}
+.furan.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.furan:hover {
+  background-color: #b366b3;
+}
+.hserlactone {
+  background-color: tan;
+  color: black;
+}
+.hserlactone a,
+.hserlactone a:link,
+.hserlactone a:visited {
+  color: black;
+}
+.hserlactone.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.hserlactone:hover {
+  background-color: #e4d2ba;
+}
+.acyl_amino_acids {
+  background-color: tan;
+  color: black;
+}
+.acyl_amino_acids a,
+.acyl_amino_acids a:link,
+.acyl_amino_acids a:visited {
+  color: black;
+}
+.acyl_amino_acids.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.acyl_amino_acids:hover {
+  background-color: #e4d2ba;
+}
+.phenazine {
+  background-color: plum;
+  color: black;
+}
+.phenazine a,
+.phenazine a:link,
+.phenazine a:visited {
+  color: black;
+}
+.phenazine.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.phenazine:hover {
+  background-color: #ebc6eb;
+}
+.phosphonate {
+  background-color: mediumaquamarine;
+  color: black;
+}
+.phosphonate a,
+.phosphonate a:link,
+.phosphonate a:visited {
+  color: black;
+}
+.phosphonate.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.phosphonate:hover {
+  background-color: #a3e1cc;
+}
+.fused {
+  background-color: royalblue;
+  color: white;
+}
+.fused a,
+.fused a:link,
+.fused a:visited {
+  color: white;
+}
+.fused.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.fused:hover {
+  background-color: #8da5ed;
+}
+.pbde {
+  background-color: purple;
+  color: white;
+}
+.pbde a,
+.pbde a:link,
+.pbde a:visited {
+  color: white;
+}
+.pbde.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.pbde:hover {
+  background-color: #b366b3;
+}
+.other {
+  background-color: midnightblue;
+  color: lightsteelblue;
+}
+.other a,
+.other a:link,
+.other a:visited {
+  color: lightsteelblue;
+}
+.other.active {
+  border-color: orangered;
+  border-width: 2px;
+  border-style: solid;
+}
+.other:hover {
+  background-color: #7575a9;
+}
+.cf_saccharide {
+  background-color: #f2f2f2;
+  color: black;
+}
+.cf_saccharide a,
+.cf_saccharide a:link,
+.cf_saccharide a:visited {
+  color: black;
+}
+.cf_saccharide.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.cf_saccharide:hover {
+  background-color: #f7f7f7;
+}
+.cf_fatty_acid {
+  background-color: #f2f2f2;
+  color: black;
+}
+.cf_fatty_acid a,
+.cf_fatty_acid a:link,
+.cf_fatty_acid a:visited {
+  color: black;
+}
+.cf_fatty_acid.active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+.cf_fatty_acid:hover {
+  background-color: #f7f7f7;
+}
+.hybrid {
+  background-color: lightsteelblue;
+  color: midnightblue;
+}
+.hybrid a,
+.hybrid a:link,
+.hybrid a:visited {
+  color: midnightblue;
+}
+.hybrid.active {
+  border-color: midnightblue;
+  border-width: 2px;
+  border-style: solid;
+}
+.hybrid:hover {
+  background-color: #d0dceb;
+}
+.wide-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .wide-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .wide-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .wide-container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .wide-container {
+    width: 1560px;
+  }
+}
+.navbar-antismash {
+  border-bottom: 4px solid #810e15;
+}
+.fake-button {
+  color: #444;
+}
+.fake-button:hover {
+  text-decoration: none;
+}
+.cluster-view {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.cluster-header {
+  font-size: 90%;
+  background-color: #810e15;
+  color: white;
+  margin: 0.1em 0 0.4em 0.1em;
+  padding: 0.2em 0 0.2em 1em;
+  border-radius: 3px;
+}
+.cluster-download {
+  display: block;
+  float: right;
+}
+.spacer {
+  margin: 0.5em;
+}
+.search-box {
+  padding-top: 2em;
+}
+.search-button {
+}
+.cluster-list {
+  cursor: pointer;
+}
+.link-external::after {
+  font-family: "FontAwesome";
+  font-size: 80%;
+  content: "\f08e";
+}
+.similarity-high {
+  color: darkgreen;
+}
+.similarity-medium {
+  color: chocolate;
+}
+.similarity-low {
+  color: indianred;
+}
+.stats-top {
+  background-color: #eee;
+}
+.stats-definition-term {
+  font-weight: bold;
+}
+.stats-definition-data {
+  font-weight: bold;
+  float: right;
+}
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  padding-top: 0.25em;
+  border-top: 1px solid #810e15;
+  margin-top: 2em;
+}
+.org-logos {
+  margin-top: 1em;
+}
+.cite-me {
+  margin-top: 1em;
+}
+.digits {
+  text-align: right;
+}
+.cluster-type {
+  text-align: center;
+}
+.pattern-list {
+  margin: 1em 0;
+  padding: 2em 1em;
+  border-radius: 8px;
+  border: 1px dashed #444;
+}
+.query-operation {
+  list-style: none;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #eee;
+}
+.pad-left-1 {
+  padding-left: 1em;
+}
+.jstree-container {
+  overflow-y: auto;
+}
+@media (min-height: 500px) {
+  .jstree-container {
+    max-height: 200px;
+  }
+}
+@media (min-height: 750px) {
+  .jstree-container {
+    max-height: 450px;
+  }
+}
+@media (min-height: 1000px) {
+  .jstree-container {
+    max-height: 750px;
+  }
+}
+.tooltip {
+  border: 2px solid slategray;
+  background-color: #ddd;
+  display: none;
+  position: absolute;
+  font-size: 80%;
+  padding: 0.5em;
+  color: #810e15;
+}
+.svgene-type-other {
+  fill: gray;
+  stroke: black;
+}
+.svgene-type-biosynthetic {
+  fill: #810e15;
+  stroke: black;
+}
+.svgene-type-transport {
+  fill: cornflowerblue;
+  stroke: black;
+}
+.svgene-type-regulatory {
+  fill: seagreen;
+  stroke: black;
+}
+.svgene-line {
+  stroke-width: 1px;
+  stroke: #888;
+}
+.svgene-locustag {
+  fill: #810e15;
+  display: none;
+  font-size: 80%;
+}
+.svgene-tooltip {
+  border: 2px solid slategray;
+  background-color: #ddd;
+  display: none;
+  position: absolute;
+  font-size: 80%;
+  padding: 0.5em;
+  color: #810e15;
+}
+.svgene-tooltip-bold {
+  font-weight: bold;
+  font-size: 120%;
+}
+
