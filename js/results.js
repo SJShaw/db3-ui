@@ -89,8 +89,8 @@ function addTableRow(table, region) {
     table.append(`
       <tr class="cluster-list">
         <td><a class="link-external" target="_blank" href="https://www.ncbi.nlm.nih.gov/genome/?term=${region.acc}">${region.genus} ${region.species} ${region.strain}</a></td>
+        <td>${region.acc}</td>
         <td class="cluster-type"><span class="badge ${region.term}">${region.region_number}</span></td>
-        <td>Full</td>
         <td class="">${region.description}</td>
         <td class="digits">${region.start_pos}</td>
         <td class="digits">${region.end_pos}</td>
