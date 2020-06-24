@@ -36,6 +36,7 @@ function runSearch() {
         error: function (data, status, req) {
             //TODO show 'an error occurred'
             console.log("ignoring error");
+        }
     });
     // TODO show "Searching, please wait..."
 }
