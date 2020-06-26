@@ -15,8 +15,10 @@ function showResults(response) {
     } else {
         $(".load-more").prop("disabled", false).attr("data-start", response.offset + response.paginate);
     }
-    updateCharts($(".chart-by-type"), "Regions by type", response.stats.clusters_by_type);
-    updateCharts($(".chart-by-phylum"), "Regions by phylum", response.stats.clusters_by_phylum);
+    if (!response.disable_stats) {
+        updateCharts($(".chart-by-type"), "Regions by type", response.stats.clusters_by_type);
+        updateCharts($(".chart-by-phylum"), "Regions by phylum", response.stats.clusters_by_phylum);
+    }
 }
 
 function clearResults() {
@@ -87,7 +89,7 @@ function addTableRow(table, region) {
     }
 
     table.append(`
-      <tr class="cluster-list">
+      <tr class="cluster-list" onClick="window.open('http://localhost:5567/find/${region.acc}.${region.version}/${region.start_pos}-${region.end_pos}', '_blank')">
         <td><a class="link-external" target="_blank" href="https://www.ncbi.nlm.nih.gov/genome/?term=${region.acc}">${region.genus} ${region.species} ${region.strain}</a></td>
         <td>${region.acc}</td>
         <td class="cluster-type"><span class="badge ${region.term}">${region.region_number}</span></td>
@@ -99,4 +101,5 @@ function addTableRow(table, region) {
         <td class="digits">${similarity}</td>
         <td>${link}</td>
       </tr>`);
+    table.children("tr").last().click(() => window.open(`http://localhost:5567/find/${region.acc}.${region.version}/${region.start_pos}-${region.end_pos}`, "_blank"));
 }
