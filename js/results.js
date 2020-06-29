@@ -89,7 +89,7 @@ function addTableRow(table, region) {
     }
 
     table.append(`
-      <tr class="cluster-list" onClick="window.open('http://localhost:5567/find/${region.acc}.${region.version}/${region.start_pos}-${region.end_pos}', '_blank')">
+      <tr class="cluster-list" onClick="window.open('/output/${region.assembly_id}.${region.version}/index.html#r${region.region_nubmer}c${region.cluster_number}', '_blank')">
         <td><a class="link-external" target="_blank" href="https://www.ncbi.nlm.nih.gov/genome/?term=${region.acc}">${region.genus} ${region.species} ${region.strain}</a></td>
         <td>${region.acc}</td>
         <td class="cluster-type"><span class="badge ${region.term}">${region.region_number}</span></td>
@@ -101,5 +101,4 @@ function addTableRow(table, region) {
         <td class="digits">${similarity}</td>
         <td>${link}</td>
       </tr>`);
-    table.children("tr").last().click(() => window.open(`http://localhost:5567/find/${region.acc}.${region.version}/${region.start_pos}-${region.end_pos}`, "_blank"));
 }
