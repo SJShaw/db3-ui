@@ -10,7 +10,9 @@ function start() {
         $(".query-builder").show();
     });
     updateTermHandlers();
-    $(".query-types .btn").click(function () {
+    $(".region-result-types .btn").click(buttonClick);
+    $(".gene-result-types .btn").click(buttonClick);
+    $(".query-types .btn").click(buttonClick).click(function () {
         if ($(this).attr("data-type") === "cluster") {
             $(".gene-result-types").hide();
             $(".region-result-types").show();
@@ -31,7 +33,7 @@ function updateTermHandlers() {
     $(".remove-button").off("click").click(removeTerm);
     $(".add-button").off("click").click(addTerm);
     $("select").off("change").change(selector);
-    $(".btn-group").children().off("click").click(buttonClick);
+    $(".operator-buttons").children().off("click").click(buttonClick);
 }
 
 function gatherOp(op) {
@@ -126,7 +128,7 @@ function setExample() {
 
     updateTermHandlers();
 
-    container.find(".btn-group").children().first().click();
+    container.find(".operator-buttons").children().first().click();
 
     container.find("select").val("Genus").first().val("BGC type");
 
@@ -253,7 +255,7 @@ var containerTemplate = `<ul class="list-group"></ul>`;
 
 var opTemplate = `
     <li class="query-operation row">
-        <div class="btn-group col-sm-4">
+        <div class="btn-group col-sm-4 operator-buttons">
             <label class="btn btn-default">AND</label>
             <label class="btn btn-default active">OR</label>
             <label class="btn btn-default">EXCEPT</label>
