@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html ng-app="antismash.db.ui" lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>antiSMASH database</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-antismash">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/antismash_db_logo.svg" alt="antiSMASH logo" width="30px">
+                </a>
+                <a class="navbar-brand" href="index.html">
+                  antiSMASH database
+                </a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="stats.html"><i class="fa fa-bar-chart"></i> &nbsp; Statistics</a></li>
+                <li><a href="query.html"><i class="fa fa-search"></i> &nbsp; Query</a></li>
+                <li><a href="browse.html"><i class="fa fa-compass"></i> &nbsp; Browse</a></li>
+                <li><a href="about.html"><i class="fa fa-info"></i> &nbsp; About</a></li>
+                <li><a href="help.html"><i class="fa fa-question"></i> &nbsp; Help</a></li>
+              </ul>
+            </div>
+        </nav>
+
+  <div><div class="container">
+  <div class="page-header">
+    <h1>Help</h1>
+  </div>
+
+  <div class="row">
+    <h2>Terms and abbreviations</h2>
+    <p>
+      antiSMASH and thus the antiSMASH database use number of 
+specialised terms and abbreviations. Find an explanation of these terms 
+below.
+    </p>
+  </div>
+
+  <div role="tablist" class="panel-group">
+    <div class="panel panel-default panel-open"heading="Search categories">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <div><span>Search categories</span></div>
+    </h4>
+  </div>
+  <div>
+    <div class="panel-body">
+      <dl>
+        <dt>NCBI RefSeq accession</dt>
+        <dd>DNA record accession from RefSeq (e.g. NC_003888)</dd>
+
+        <dt>NCBI assembly ID</dt>
+        <dd>ID of an NCBI assembly project (e.g. GCF_000203835)</dd>
+
+        <dt>BGC type</dt>
+        <dd>Biosynthetic gene cluster type as predicted by antiSMASH (e.g. lanthipeptide)</dd>
+
+        <dt>Monomer</dt>
+        <dd>Monomer contained in in the cluster product (e.g. athr)</dd>
+
+        <dt>Biosynthetic profile</dt>
+        <dd>Hit against one of the pHMMs used by antiSMASH to identify core biosynthetic enzymes (e.g. LANC_like)</dd>
+
+        <dt>NRPS/PKS domain</dt>
+        <dd>Hit against one of the pHMMs specific to NRPS/PKS domains (e.g. PKS_AT)</dd>
+
+        <dt>Terpene synthase type</dt>
+        <dd>Hit against a specific terpene synthase type (e.g. STC - seqsquiterpene synthase)</dd>
+
+        <dt>Terpene cyclisation from C atom</dt>
+        <dt>Terpene cyclisation to C atom</dt>
+        <dd>C atoms in the terpene structure that are being cyclised by the terpene cyclase</dd>
+
+        <dt>smCoG hit</dt>
+        <dd>Hit against an smCoG profile (e.g. SMCOG1019 - aminotransferase)</dd>
+
+        <dt>Compound sequence</dt>
+        <dd>Amino acid sequence components of a RiPP product</dd>
+
+        <dt>RiPP compound class</dt>
+        <dd>Class of the RiPP cluster (e.g. Class I)</dd>
+
+        <dt>Strain, Species, Genus, Family, Order, Class, Phylum, Superkingdom</dt>
+        <dd>Hit by taxonomic level</dd>
+
+        <dt>ClusterBlast Hit</dt>
+        <dd>Hit against a given ClusterBlast cluster</dd>
+
+        <dt>KnownClusterBlast Hit</dt>
+        <dd>Hit against a given MIBiG cluster</dd>
+
+        <dt>SubClusterBlast Hit</dt>
+        <dd>Hit against a given SubClusterBlast cluster</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="row">
+    <h2>Example use cases</h2>
+    <p>
+      To help users getting started with antiSMASH DB, here are a number of example use cases.
+    </p>
+  </div>
+
+  <div role="tablist" class="panel-group">
+    <div class="panel panel-default">
+  <div role="tab" class="panel-heading">
+    <h4 class="panel-title">
+      <div class="accordion-toggle"><span>Finding all nonribosomal peptide clusters that incorporate hydroxyphenylglycine</span></div>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in">
+    <div class="panel-body">
+
+      On the "Build a query" tab, a user can click the "Add term" button to create a second search term. For the first
+      term, he or she might, e.g., select "BGC type" as category and enter "nrps" as the search string. For the second term,
+      he or she could, e.g., select "monomer" as category and enter "hpg" as search string, and hit "search".
+      <hr>
+      <img src="images/tutorial_monomer.png" class="img-responsive center-block img-thumbnail">
+      <strong>Query to find NRPS clusters including the monomer hydroxyphenylglycine (hpg).</strong>
+      <hr> Currently three BGCs in the database match these search criteria and are returned on the results page:
+      <hr>
+      <img src="images/tutorial_monomer_results.png" class="img-responsive center-block img-thumbnail">
+      <strong>Result for searching NRPS clusters including the monomer hydroxyphenylglycine (hpg).</strong>
+
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-default" >
+  <div role="tab" class="panel-heading">
+    <h4 class="panel-title">
+      <div class="accordion-toggle"><span>
+        Finding all ribosomally synthesised and posttranslationally modified peptide clusters in the Genus <i>Streptomyces</i> that
+        are not lanthipeptides.
+      </span></div>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in">
+    <div class="panel-body">
+      On the "Build a query" tab, a user could click the "Add term" 
+button twice to create a second and third search term.
+      For the first term, he or she could select "genus" as category and
+ enter "Streptomyces" as the search string. For the second
+      term, "BGC type" would be "ripp". The operation should be switched
+ from "AND" to "EXCEPT". For the third
+      term, "BGC type" could be selected as category and "lanthipeptide" 
+entered as search string.
+      <hr>
+      <img src="images/tutorial_genus.png" class="img-responsive center-block img-thumbnail">
+      <strong>Query to find RiPPs in <i>Streptomyces</i> that are not lanthipeptides.</strong>
+      <hr> This query currently yields 2089 clusters. To save the results for further analysis, the result table can be downloaded
+      as CSV file that can then be opened in a spreadsheet application.
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-default">
+  <div role="tab" class="panel-heading">
+    <h4 class="panel-title">
+      <div class="accordion-toggle"><span>Downloading all ACP and KS domains in the database in FASTA format</span></div>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in">
+    <div class="panel-body">
+      On the "Build a query" tab, a user can click "NRPS/PKS Domain" on the "Search" setting, and "FASTA" on
+      "Return data in format".
+      Afterwards he or she could click the "Add term" button once to create a second search term.
+      For the first term, he or she could select "NRPS/PKS domain" as category and enter "ACP" as the search string.
+      For the second term, "NRPS/PKS domain" would be the category again, and "PKS_KS" the search string. The operation would be
+      changed to "OR".
+      <hr>
+      <img src="images/tutorial_asdomain.png" class="img-responsive center-block img-thumbnail">
+      <strong>Download all ACP and KS domain in FASTA format</strong>
+      <hr>
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-default panel-open">
+  <div role="tab" class="panel-heading">
+    <h4 class="panel-title">
+      <div data-toggle="collapse"><span>Downloading all lanthipeptide class I prepeptide genes in FASTA format</span></div>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in">
+    <div class="panel-body">
+      On the "Build a query" tab, a user can click "Gene" on the "Search" setting, and "FASTA" on
+      "Return data in format".
+      Afterwards he or she could click the "Add term" button once to create a second search term.
+      For the first term, he or she could select "BGC type" as category and enter "lanthipeptide" as the search string.
+      For the second term, the category would be "Compound class", and "Class-I" the search string.
+      <hr>
+      <img src="images/tutorial_gene.png" class="img-responsive center-block img-thumbnail">
+      <strong>Download all lanthipeptide class I prepeptide genes in FASTA format</strong>
+      <hr>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="col-sm-2">
+                    <img src="images/antismash_db_logo.svg" height="100px">
+                </div>
+                <div class="col-sm-6 cite-me well">
+If you have found the antiSMASH database useful, please <a href="about.html">cite us</a>.
+                </div>
+                <div class="col-sm-4 org-logos">
+                    <div class="col-sm-4">
+                        <img src="images/dtu_logo.svg" height="80px">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/cfb_logo.svg" height="80px">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/help.js"></script>
+        <script>
+            $(document).ready(function() {
+                start();
+            });
+        </script>
+    </body>
+</html>

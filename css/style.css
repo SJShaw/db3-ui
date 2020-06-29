@@ -1104,3 +1104,6 @@
   font-size: 120%;
 }
 
+.panel-title:hover {
+  text-decoration: underline;
+}
