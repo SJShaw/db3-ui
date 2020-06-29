@@ -74,17 +74,22 @@
                                         <label class="col-sm-1 control-label">Search: </label>
                                         <div class="col-sm-4">
                                             <div class="btn-group query-types">
-                                                <label class="btn btn-info active">Region</label>
-                                                <label class="btn btn-info">Gene</label>
-                                                <label class="btn btn-info">NRPS/PKS Domain</label>
+                                                <label class="btn btn-info active" data-type="cluster">Region</label>
+                                                <label class="btn btn-info" data-type="gene">Gene</label>
+                                                <label class="btn btn-info" data-type="domain">NRPS/PKS Domain</label>
                                             </div>
                                         </div>
                                         <label class="col-sm-2 control-label">Return data in format: </label>
                                         <div class="col-sm-3">
-                                            <div class="btn-group result-types">
-                                                <label class="btn btn-info active">Graphical</label>
-                                                <label class="btn btn-info">CSV</label>
-                                                <label class="btn btn-info">DNA FASTA</label>
+                                            <div class="btn-group region-result-types">
+                                                <label class="btn btn-info active" data-type="json">Graphical</label>
+                                                <label class="btn btn-info" data-type="csv">CSV</label>
+                                                <label class="btn btn-info" data-type="fasta">DNA FASTA</label>
+                                            </div>
+                                            <div class="btn-group gene-result-types" style="display: none;">
+                                                <label class="btn btn-info active" data-type="csv">CSV</label>
+                                                <label class="btn btn-info" data-type="fasta">DNA FASTA</label>
+                                                <label class="btn btn-info" data-type="fastaa">AA FASTA</label>
                                             </div>
                                         </div>
                                     </div>
@@ -200,6 +205,7 @@ If you have found the antiSMASH database useful, please <a href="about.html">cit
         </footer>
         <script src="js/jquery.js"></script>
         <script src="js/Chart.js"></script>
+        <script src="js/FileSaver.js"></script>
         <script src="js/results.js"></script>
         <script src="js/query_builder.js"></script>
         <script>

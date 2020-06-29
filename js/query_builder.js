@@ -1,4 +1,3 @@
-
 function start() {
     $(".query-container").append(termTemplate);
     $(".example-button").click(setExample);
@@ -11,6 +10,20 @@ function start() {
         $(".query-builder").show();
     });
     updateTermHandlers();
+    $(".query-types .btn").click(function () {
+        if ($(this).attr("data-type") === "cluster") {
+            $(".gene-result-types").hide();
+            $(".region-result-types").show();
+        } else {
+            $(".region-result-types").hide();
+            $(".gene-result-types").show();
+            if ($(this).attr("data-type") === "gene") {
+                $(".gene-result-types .btn[data-type='fasta']").click();
+            } else {
+                $(".gene-result-types .btn[data-type='fastaa']").click();
+            }
+        }
+    });
 }
 
 function updateTermHandlers() {
@@ -54,39 +67,48 @@ function runSearch() {
     } else {
         var object = gatherOp($(".query-operation").first());
     }
+    if (!object || !object.category && !object.left) {
+        return;
+    }
+    var target = "search";
+    var returnType = $(".region-result-types .active").attr("data-type");
+    var searchType = $(".query-types .active").attr("data-type");
 
+    if (returnType !== "json") {
+        target = "export";
+    } else if (searchType !== "cluster") {
+        target = "export";
+        returnType = $(".gene-result-types .active").attr("data-type");
+    }
     $.ajax({
         method: 'post',
-        url: "/api/v1.0/search",
+        url: `/api/v1.0/${target}`,
         data: JSON.stringify({
             query: {
-               'return_type': 'json',
-               'search': 'cluster',
+               'return_type': returnType,
+               'search': searchType,
                'terms': object,
             },
             offset: $(".query-builder").is(":visible") ? 0 : $(".load-more").attr("data-start")
         }),
-        dataType: 'json',
+        dataType: returnType === 'json' ? 'json' : 'text',
         contentType: 'application/json',
         processData: false,
         async: true,
         success: function (data, status, req) {
-            console.log(status, data);
-            //TODO show results
-            if (data.clusters && data.clusters.length === 0) {
+            if (!data || data.clusters && data.clusters.length === 0) {
                 //TODO handle no results
                 alert("no results");
-            } else {
-                // TODO if region search type
+            } else if (returnType === "json") {
                 $(".query-builder").hide();
                 showResults(data);
-                //TODO FASTA
-                //TODO CSV
+            } else {
+                saveAs(new Blob([data], {type: `text/${returnType};charset=utf-8`}), "asdb_results." + returnType);
             }
         },
         error: function (data, status, req) {
             //TODO show 'an error occurred'
-            console.log(status, data);
+            console.log(status, data, req);
             alert("failed: " + status);
         }
     });
