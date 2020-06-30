@@ -1107,3 +1107,20 @@
 .panel-title:hover {
   text-decoration: underline;
 }
+
+.ui-autocomplete {
+  list-style: none;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  padding-left: 1em;
+  display: block;
+  background: white;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.ui-menu-item .ui-state-active {
+  color: #fff;
+  background-color: #4a080c;
+}

@@ -9,6 +9,7 @@ function start() {
         clearResults();
         $(".query-builder").show();
     });
+    fillDropdown($("input:visible"));
     updateTermHandlers();
     $(".region-result-types .btn").click(buttonClick);
     $(".gene-result-types .btn").click(buttonClick);
@@ -58,7 +59,7 @@ function gatherTerm(term) {
     return {
         "term_type": "expr",
         "category": term.find("select option:selected").attr("data-query"),
-        "term": term.find("input").val(),
+        "term": term.find("input").val().split("  (")[0],
     };
 }
 
@@ -117,7 +118,25 @@ function runSearch() {
     // TODO show "Searching, please wait..."
 }
 
-
+function fillDropdown(input) {
+    if (input.hasClass("ui-autocomplete-input")) {
+        input.autocomplete("destroy");
+    }
+    input.autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                method: "get",
+                url: `/api/v1.0/available/${input.closest(".term").find("option:selected").attr("data-query")}/${input.val()}`,
+                dataType: "json",
+                success: function(data) {
+                    var items = [];
+                    data.forEach(item => items.push(`${item.val}  (${item.desc})`));
+                    response(items);
+                }
+            });
+        }
+    });
+}
 
 function setExample() {
     var container = $(".query-container");
@@ -206,6 +225,7 @@ function addTerm() {
     }
     newParent.find("select").first().val(term.find("select").val());
     newParent.find("input").first().prop("disabled", false).attr("placeholder", "enter query term").val(term.find("input").val());
+    newParent.find("input").each(() => fillDropdown($(this)));
     term.remove();
     updateTermHandlers();
 }
@@ -311,8 +331,6 @@ var termTemplate = `
             </div>
             <div class="col-sm-4">
                 <input type="text" class="form-control" placeholder="select a category" disabled="disabled">
-                <ul class="dropdown-menu" role="listbox">
-                </ul>
             </div>
             <div class="col-sm-1 col-sm-offset-3">
                 <button class="add-button btn btn-default">
