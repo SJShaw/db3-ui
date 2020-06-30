@@ -225,7 +225,7 @@ function addTerm() {
     }
     newParent.find("select").first().val(term.find("select").val());
     newParent.find("input").first().prop("disabled", false).attr("placeholder", "enter query term").val(term.find("input").val());
-    newParent.find("input").each(() => fillDropdown($(this)));
+    newParent.find("input").each(function () {fillDropdown($(this))});
     term.remove();
     updateTermHandlers();
 }
