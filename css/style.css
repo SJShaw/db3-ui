@@ -305,21 +305,21 @@
 .lantibiotic:hover {
   background-color: #ffffad;
 }
-.lantipeptide {
+.lanthipeptide {
   background-color: #ffff77;
   color: blue;
 }
-.lantipeptide a,
-.lantipeptide a:link,
-.lantipeptide a:visited {
+.lanthipeptide a,
+.lanthipeptide a:link,
+.lanthipeptide a:visited {
   color: blue;
 }
-.lantipeptide.active {
+.lanthipeptide.active {
   border-color: blue;
   border-width: 2px;
   border-style: solid;
 }
-.lantipeptide:hover {
+.lanthipeptide:hover {
   background-color: #ffffad;
 }
 .bacteriocin {
